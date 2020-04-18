@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('space3C admin');
+    expect(page.getWelcomeText()).toEqual('space3C admin app is running!');
   });
 
   afterEach(async () => {
