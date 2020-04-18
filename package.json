@@ -7,7 +7,9 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "aws s3 sync ./dist/space3c-admin s3://admin.space3c.com --acl public-read --exclude '*.DS_Store*'",
+    "invalidate": "aws cloudfront create-invalidation --distribution-id E2PEHTD72K5R04 --paths \"/*\""
   },
   "private": true,
   "dependencies": {
