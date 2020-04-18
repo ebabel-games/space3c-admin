@@ -9,9 +9,9 @@ import { Player } from '../player';
 export class PlayersComponent implements OnInit {
   player: Player = {
     id: 'fdsgfh324lkhfdlgdf32423',
+    level: 0,
     x: 320,
     y: 267,
-    level: 0,
     mission: 2,
   };
 

@@ -1,14 +1,26 @@
 <h2>Player {{player.id | uppercase}}</h2>
-
-<ul>
-  <li>x: {{player.x}}</li>
-  <li>y: {{player.y}}</li>
-  <li>level: {{player.level}}</li>
-  <li>mission: {{player.mission}}</li>
-</ul>
+<h3>Last known location</h3>
+<p>Last see in level {{player.level}} at the co-ordinates {{player.x}}:{{player.y}}.</p>
+<h3>Mission</h3>
+<p>Player currently assigned to mission {{player.mission}}.</p>
 
 <div>
+  <label>Level:
+    <input [(ngModel)]="player.level" placeholder="0">
+  </label>
+</div>
+<div>
   <label>x:
-    <input type="number" [(ngModel)]="player.x" placeholder="320">
+    <input [(ngModel)]="player.x" placeholder="320">
+  </label>
+</div>
+<div>
+  <label>y:
+    <input [(ngModel)]="player.y" placeholder="267">
+  </label>
+</div>
+<div>
+  <label>Mission:
+    <input [(ngModel)]="player.mission" placeholder="2">
   </label>
 </div>
