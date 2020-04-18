@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'space3c-admin'`, () => {
+  it(`should have as title 'space3C admin'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('space3c-admin');
+    expect(app.title).toEqual('space3C admin');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('space3c-admin app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('space3C admin app is running!');
   });
 });
