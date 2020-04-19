@@ -1,4 +1,5 @@
 import { Player } from './player';
+import { MISSIONS } from './mock-missions';
 
 export const PLAYERS: Player[] = [
   {
@@ -8,7 +9,7 @@ export const PLAYERS: Player[] = [
     level: 0,
     x: 300,
     y: 200,
-    mission: 1,
+    mission: MISSIONS[0],
   },
   {
     id: 'slhlkber3423d4kkjbd',
@@ -17,7 +18,7 @@ export const PLAYERS: Player[] = [
     level: 1,
     x: 1300,
     y: 700,
-    mission: 4,
+    mission: MISSIONS[1],
   },
   {
     id: 'ejbgdk342743gdgd34bb',
@@ -26,7 +27,7 @@ export const PLAYERS: Player[] = [
     level: 1,
     x: 400,
     y: 900,
-    mission: 3,
+    mission: MISSIONS[2],
   },
   {
     id: 'sejkbkjxgd3434232jklh',
@@ -35,9 +36,8 @@ export const PLAYERS: Player[] = [
     level: 0,
     x: 1800,
     y: 1200,
-    mission: 1,
+    mission: MISSIONS[3],
   },
-
   {
     id: 'sdfskrth234jhfgkdf3',
     maxHitPoints: 27,
@@ -45,7 +45,7 @@ export const PLAYERS: Player[] = [
     level: 3,
     x: 64,
     y: 64,
-    mission: 1,
+    mission: MISSIONS[4],
   },
   {
     id: 'sdfghdskhewr21132hjk',
@@ -54,7 +54,7 @@ export const PLAYERS: Player[] = [
     level: 6,
     x: 379,
     y: 1000,
-    mission: 4,
+    mission: MISSIONS[5],
   },
   {
     id: 'sfkgkg435kjhgkdfds',
@@ -63,7 +63,7 @@ export const PLAYERS: Player[] = [
     level: 4,
     x: 700,
     y: 300,
-    mission: 3,
+    mission: MISSIONS[6],
   },
   {
     id: 'sdgdfg342543gdfg32',
@@ -72,7 +72,6 @@ export const PLAYERS: Player[] = [
     level: 8,
     x: 950,
     y: 1100,
-    mission: 1,
+    mission: MISSIONS[2],
   },
-
 ];

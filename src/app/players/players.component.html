@@ -25,7 +25,7 @@
   </svg>
 
   <h3>Mission</h3>
-  <p>Player currently assigned to mission {{player.mission}}.</p>
+  <p>Player on mission {{player.mission.id}}: <em>{{player.mission.title}}</em>.</p>
 
   <h3>Edit Player</h3>
   <div>
@@ -55,7 +55,9 @@
   <div>
     <label>
       <span>Mission:</span>
-      <input type="number" [(ngModel)]="player.mission" placeholder="1" min="1" max="9">
+      <select [(ngModel)]="player.mission">
+        <option *ngFor="let mission of missions" [ngValue]="mission">{{mission.title}}</option>
+      </select>
     </label>
   </div>  
 </section>
