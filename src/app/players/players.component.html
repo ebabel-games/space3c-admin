@@ -36,13 +36,13 @@
   <div>
     <label>
       <span>Position x:</span>
-      <input type="number" [(ngModel)]="player.x" placeholder="320" min="0" max="10000">
+      <input type="range" [(ngModel)]="player.x" min="0" max="2000" step="64">
     </label>
   </div>
   <div>
     <label>
       <span>Position y:</span>
-      <input type="number" [(ngModel)]="player.y" placeholder="267" min="0" max="10000">
+      <input type="range" [(ngModel)]="player.y" min="0" max="1500">
     </label>
   </div>
   <div>
