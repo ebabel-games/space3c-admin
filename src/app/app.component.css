@@ -1,0 +1,11 @@
+header {
+  background-color: #c8d0d6;
+  color: #333a4d;
+  padding: .5em 1em 1em;
+  margin: 0 0 1em;
+}
+
+.tagline {
+  font-size: .8em;
+  opacity: .75;
+}

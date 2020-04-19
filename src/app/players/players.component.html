@@ -1,26 +1,54 @@
-<h2>Player {{player.id | uppercase}}</h2>
-<h3>Last known location</h3>
-<p>Last see in level {{player.level}} at the co-ordinates {{player.x}}:{{player.y}}.</p>
-<h3>Mission</h3>
-<p>Player currently assigned to mission {{player.mission}}.</p>
 
-<div>
-  <label>Level:
-    <input [(ngModel)]="player.level" placeholder="0">
-  </label>
-</div>
-<div>
-  <label>x:
-    <input [(ngModel)]="player.x" placeholder="320">
-  </label>
-</div>
-<div>
-  <label>y:
-    <input [(ngModel)]="player.y" placeholder="267">
-  </label>
-</div>
-<div>
-  <label>Mission:
-    <input [(ngModel)]="player.mission" placeholder="2">
-  </label>
-</div>
+<section *ngFor="let player of players" class="players">
+  <header>
+    <h2>Player {{player.id | uppercase}}</h2>
+  </header>
+
+  <h3>Hit points</h3>
+  <p class="hitPoints">
+    <span [ngStyle]="{'width': player.hitPoints / player.maxHitPoints | percent}"></span>
+    {{(player.hitPoints / player.maxHitPoints) | percent}}
+  </p>
+  <h3>Last known location</h3>
+  <p>Last seen in level {{player.level}} at the co-ordinates {{player.x}}:{{player.y}}.</p>
+  <h3>Mission</h3>
+  <p>Player currently assigned to mission {{player.mission}}.</p>
+
+  <h3>Edit Player</h3>
+  <div>
+    <label>
+      <span>Hit Points:</span>
+      <input type="number" [(ngModel)]="player.hitPoints" placeholder="27" min="0" max="27">
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Max Hit Points:</span>
+      {{player.maxHitPoints}}
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Level:</span>
+      <input type="number" [(ngModel)]="player.level" placeholder="0" min="0" max="10">
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Position x:</span>
+      <input type="number" [(ngModel)]="player.x" placeholder="320" min="0" max="10000">
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Position y:</span>
+      <input type="number" [(ngModel)]="player.y" placeholder="267" min="0" max="10000">
+    </label>
+  </div>
+  <div>
+    <label>
+      <span>Mission:</span>
+      <input type="number" [(ngModel)]="player.mission" placeholder="1" min="1" max="9">
+    </label>
+  </div>  
+</section>

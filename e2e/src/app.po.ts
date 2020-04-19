@@ -6,6 +6,6 @@ export class AppPage {
   }
 
   getWelcomeText(): Promise<string> {
-    return element(by.css('app-root .content span')).getText() as Promise<string>;
+    return element(by.css('app-root .tagline span')).getText() as Promise<string>;
   }
 }

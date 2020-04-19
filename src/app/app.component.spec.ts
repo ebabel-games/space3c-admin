@@ -26,10 +26,10 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('space3C admin');
   });
 
-  it('should render title', () => {
+  it('should render tagline', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('space3C admin app is running!');
+    expect(compiled.querySelector('.tagline span').textContent).toContain('Outsmart the AI and save mankind!');
   });
 });

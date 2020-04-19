@@ -1,0 +1,70 @@
+.players {
+  background-color: #c8d0d6;
+  color: #333a4d;
+  border: solid 1px;
+  margin: 0 1em 2em;
+  padding: .75em 1em 1.25em;
+  box-shadow: inset 0 0 5px 0 rgba(51,58,77,1);
+  font-size: .8em;
+  width: 300px;
+  float: left;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 0 0 .25em;
+}
+
+h3 {
+  font-size: 1.25em;
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+.hitPoints {
+  background-color: #333a4d;
+  color: #c8d0d6;
+  text-align: center;
+  position: relative;
+  line-height: 1.5em;
+  padding-bottom: .2em;
+  overflow: hidden;
+  border-left: solid 2px #333a4d;
+  border-right: solid 2px #333a4d;
+}
+.hitPoints span {
+  display: inline-block;
+  padding-bottom: .2em;
+  background-color: #c8d0d6;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  bottom: 2px;
+  opacity: .3;
+  transition: all .3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+label {
+  display: block;
+  line-height: 2.5em;
+}
+
+label span {
+  display: inline-block;
+  min-width: 120px;
+}
+
+input[type=number] {
+  min-width: 50px;
+}
+
+@media (max-width: 414px) {
+  .players {
+    width: 84%;
+    margin: 0 auto 2em;
+    display: block;
+    float: none;
+  }
+}

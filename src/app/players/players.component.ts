@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Player } from '../player';
+import { PLAYERS } from '../mock-players';
 
 @Component({
   selector: 'app-players',
@@ -7,17 +8,11 @@ import { Player } from '../player';
   styleUrls: ['./players.component.css']
 })
 export class PlayersComponent implements OnInit {
-  player: Player = {
-    id: 'fdsgfh324lkhfdlgdf32423',
-    level: 0,
-    x: 320,
-    y: 267,
-    mission: 2,
-  };
+  players: Player[] = PLAYERS;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
-
 }
