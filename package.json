@@ -8,8 +8,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "yarn build && aws s3 sync ./dist/space3c-admin s3://admin.space3c.com --acl public-read --exclude '*.DS_Store*'",
-    "invalidate": "aws cloudfront create-invalidation --distribution-id E2PEHTD72K5R04 --paths \"/*\""
+    "deploy": "yarn build && firebase deploy --only hosting",
+    "deploy:s3": "yarn build && aws s3 sync ./dist/space3c-admin s3://admin.space3c.com --acl public-read --exclude '*.DS_Store*'",
+    "invalidate:s3": "aws cloudfront create-invalidation --distribution-id E2PEHTD72K5R04 --paths \"/*\""
   },
   "private": true,
   "dependencies": {
