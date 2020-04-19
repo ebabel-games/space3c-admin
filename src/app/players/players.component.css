@@ -8,6 +8,7 @@
   font-size: .8em;
   width: 300px;
   float: left;
+  border-radius: 1em;
 }
 
 h2 {
@@ -57,7 +58,14 @@ label span {
 }
 
 input[type=number] {
-  min-width: 50px;
+  min-width: 40px;
+}
+
+.worldMap {
+  background-color: #7b9592;
+  margin: 0 auto 1em;
+  display: block;
+  border: solid 1px;
 }
 
 @media (max-width: 414px) {

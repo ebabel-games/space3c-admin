@@ -9,8 +9,21 @@
     <span [ngStyle]="{'width': player.hitPoints / player.maxHitPoints | percent}"></span>
     {{(player.hitPoints / player.maxHitPoints) | percent}}
   </p>
+
   <h3>Last known location</h3>
-  <p>Last seen in level {{player.level}} at the co-ordinates {{player.x}}:{{player.y}}.</p>
+  <p>Last seen in level {{player.level}} at the coordinates {{player.x}}:{{player.y}}.</p>
+  <svg width="205" height="155" viewBox="0 0 205 155" class="worldMap">
+    <circle
+      [attr.r]="player.hitPoints / 10 + 2"
+      [attr.cx]="player.x / 10"
+      [attr.cy]="player.y / 10"
+      stroke-width="1"
+      class="playerLocation"
+      fill="#c8d0d6"
+      stroke="#333a4d"
+    />
+  </svg>
+
   <h3>Mission</h3>
   <p>Player currently assigned to mission {{player.mission}}.</p>
 
@@ -18,31 +31,25 @@
   <div>
     <label>
       <span>Hit Points:</span>
-      <input type="number" [(ngModel)]="player.hitPoints" placeholder="27" min="0" max="27">
+      <input type="number" [(ngModel)]="player.hitPoints" placeholder="27" min="0" max="27"> / {{player.maxHitPoints}}
     </label>
   </div>
   <div>
     <label>
-      <span>Max Hit Points:</span>
-      {{player.maxHitPoints}}
-    </label>
-  </div>
-  <div>
-    <label>
-      <span>Level:</span>
+      <span>Game Level:</span>
       <input type="number" [(ngModel)]="player.level" placeholder="0" min="0" max="10">
     </label>
   </div>
   <div>
     <label>
       <span>Position x:</span>
-      <input type="range" [(ngModel)]="player.x" min="0" max="2000" step="64">
+      <input type="range" [(ngModel)]="player.x" min="64" max="1984" step="64">
     </label>
   </div>
   <div>
     <label>
       <span>Position y:</span>
-      <input type="range" [(ngModel)]="player.y" min="0" max="1500">
+      <input type="range" [(ngModel)]="player.y" min="64" max="1489">
     </label>
   </div>
   <div>
