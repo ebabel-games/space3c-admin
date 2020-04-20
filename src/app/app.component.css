@@ -6,6 +6,7 @@ header {
 }
 
 .tagline {
-  font-size: .8em;
+  font-size: .85em;
   opacity: .75;
+  font-style: italic;
 }

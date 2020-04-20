@@ -3,7 +3,7 @@ import { MISSIONS } from './mock-missions';
 
 export const PLAYERS: Player[] = [
   {
-    id: 'fdsgfh324lkhfdl2423',
+    id: 'fdsgfh324lkhf423',
     maxHitPoints: 27,
     hitPoints: 12,
     level: 0,
@@ -12,7 +12,7 @@ export const PLAYERS: Player[] = [
     mission: MISSIONS[0],
   },
   {
-    id: 'slhlkber3423d4kkjbd',
+    id: 'slhlkber342kkjbd',
     maxHitPoints: 27,
     hitPoints: 26,
     level: 1,
@@ -21,7 +21,7 @@ export const PLAYERS: Player[] = [
     mission: MISSIONS[1],
   },
   {
-    id: 'ejbgdk342743gdgd34bb',
+    id: 'ejbgdk34274334bb',
     maxHitPoints: 27,
     hitPoints: 20,
     level: 1,
@@ -30,7 +30,7 @@ export const PLAYERS: Player[] = [
     mission: MISSIONS[2],
   },
   {
-    id: 'sejkbkjxgd3434232jklh',
+    id: 'sejkbkjxg232jklh',
     maxHitPoints: 27,
     hitPoints: 15,
     level: 0,
@@ -39,7 +39,7 @@ export const PLAYERS: Player[] = [
     mission: MISSIONS[3],
   },
   {
-    id: 'sdfskrth234jhfgkdf3',
+    id: 'sdfskrthhfgkdf3',
     maxHitPoints: 27,
     hitPoints: 16,
     level: 3,
@@ -48,7 +48,7 @@ export const PLAYERS: Player[] = [
     mission: MISSIONS[4],
   },
   {
-    id: 'sdfghdskhewr21132hjk',
+    id: 'sdfghdskh32hjk',
     maxHitPoints: 27,
     hitPoints: 5,
     level: 6,
@@ -57,7 +57,7 @@ export const PLAYERS: Player[] = [
     mission: MISSIONS[5],
   },
   {
-    id: 'sfkgkg435kjhgkdfds',
+    id: 'sfkgkg435kdfds',
     maxHitPoints: 27,
     hitPoints: 27,
     level: 4,
@@ -66,7 +66,7 @@ export const PLAYERS: Player[] = [
     mission: MISSIONS[6],
   },
   {
-    id: 'sdgdfg342543gdfg32',
+    id: 'sdgdfg3gdfg32',
     maxHitPoints: 27,
     hitPoints: 3,
     level: 8,

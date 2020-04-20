@@ -1,63 +1,64 @@
-
-<section *ngFor="let player of players" class="players">
-  <header>
-    <h2>Player {{player.id | uppercase}}</h2>
-  </header>
-
-  <h3>Hit points</h3>
-  <p class="hitPoints">
-    <span [ngStyle]="{'width': player.hitPoints / player.maxHitPoints | percent}"></span>
-    {{(player.hitPoints / player.maxHitPoints) | percent}}
-  </p>
-
-  <h3>Last known location</h3>
-  <p>Last seen in level {{player.level}} at the coordinates {{player.x}}:{{player.y}}.</p>
-  <svg width="205" height="155" viewBox="0 0 205 155" class="worldMap">
-    <circle
-      [attr.r]="player.hitPoints / 10 + 2"
-      [attr.cx]="player.x / 10"
-      [attr.cy]="player.y / 10"
-      stroke-width="1"
-      class="playerLocation"
-      fill="#c8d0d6"
-      stroke="#333a4d"
-    />
-  </svg>
-
-  <h3>Mission</h3>
-  <p>Player on mission {{player.mission.id}}: <em>{{player.mission.title}}</em>.</p>
-
-  <h3>Edit Player</h3>
-  <div>
-    <label>
-      <span>Hit Points:</span>
-      <input type="number" [(ngModel)]="player.hitPoints" placeholder="27" min="0" max="27"> / {{player.maxHitPoints}}
-    </label>
-  </div>
-  <div>
-    <label>
-      <span>Game Level:</span>
-      <input type="number" [(ngModel)]="player.level" placeholder="0" min="0" max="10">
-    </label>
-  </div>
-  <div>
-    <label>
-      <span>Position x:</span>
-      <input type="range" [(ngModel)]="player.x" min="64" max="1984" step="64">
-    </label>
-  </div>
-  <div>
-    <label>
-      <span>Position y:</span>
-      <input type="range" [(ngModel)]="player.y" min="64" max="1489">
-    </label>
-  </div>
-  <div>
-    <label>
-      <span>Mission:</span>
-      <select [(ngModel)]="player.mission">
-        <option *ngFor="let mission of missions" [ngValue]="mission">{{mission.title}}</option>
-      </select>
-    </label>
-  </div>  
-</section>
+<div class="players">
+  <section *ngFor="let player of players" class="player">
+    <header>
+      <h2>Player {{player.id | uppercase}}</h2>
+    </header>
+  
+    <h3>Hit points</h3>
+    <p class="hitPoints">
+      <span [ngStyle]="{'width': player.hitPoints / player.maxHitPoints | percent}"></span>
+      {{(player.hitPoints / player.maxHitPoints) | percent}}
+    </p>
+  
+    <h3>Last known location</h3>
+    <p>Last seen in level {{player.level}} at the coordinates {{player.x}}:{{player.y}}.</p>
+    <svg width="205" height="155" viewBox="0 0 205 155" class="worldMap">
+      <circle
+        [attr.r]="player.hitPoints / 10 + 2"
+        [attr.cx]="player.x / 10"
+        [attr.cy]="player.y / 10"
+        stroke-width="1"
+        class="playerLocation"
+        fill="#c8d0d6"
+        stroke="#333a4d"
+      />
+    </svg>
+  
+    <h3>Mission</h3>
+    <p>Player on mission {{player.mission.id}}: <em>{{player.mission.title}}</em>.</p>
+  
+    <h3>Edit Player</h3>
+    <div>
+      <label>
+        <span>Hit Points:</span>
+        <input type="number" [(ngModel)]="player.hitPoints" placeholder="27" min="0" max="27"> / {{player.maxHitPoints}}
+      </label>
+    </div>
+    <div>
+      <label>
+        <span>Game Level:</span>
+        <input type="number" [(ngModel)]="player.level" placeholder="0" min="0" max="10">
+      </label>
+    </div>
+    <div>
+      <label>
+        <span>Position x:</span>
+        <input type="range" [(ngModel)]="player.x" min="64" max="1984" step="64">
+      </label>
+    </div>
+    <div>
+      <label>
+        <span>Position y:</span>
+        <input type="range" [(ngModel)]="player.y" min="64" max="1489">
+      </label>
+    </div>
+    <div>
+      <label>
+        <span>Mission:</span>
+        <select [(ngModel)]="player.mission">
+          <option *ngFor="let mission of missions" [ngValue]="mission">{{mission.title}}</option>
+        </select>
+      </label>
+    </div>  
+  </section>
+</div>
