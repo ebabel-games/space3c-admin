@@ -5,13 +5,30 @@
     </header>
   
     <h3>Hit points</h3>
+    <div class="form-group">
+      <label>
+        <span>Hit Points:</span>
+        <input type="number" [(ngModel)]="player.hitPoints" placeholder="27" min="0" max="27" class="form-control-sm"> / {{player.maxHitPoints}}
+      </label>
+    </div>
     <p class="hitPoints">
       <span [ngStyle]="{'width': player.hitPoints / player.maxHitPoints | percent}"></span>
       {{(player.hitPoints / player.maxHitPoints) | percent}}
     </p>
   
     <h3>Last known location</h3>
-    <p>Last seen in level {{player.level}} at the coordinates {{player.x}}:{{player.y}}.</p>
+    <div class="form-group">
+      <label>
+        <span>Position x: {{player.x}}</span>
+        <input type="range" [(ngModel)]="player.x" min="64" max="1984" step="64" class="form-control-range">
+      </label>
+    </div>
+    <div class="form-group">
+      <label>
+        <span>Position y: {{player.y}}</span>
+        <input type="range" [(ngModel)]="player.y" min="64" max="1489" class="form-control-range">
+      </label>
+    </div>
     <svg width="205" height="155" viewBox="0 0 205 155" class="worldMap">
       <circle
         [attr.r]="player.hitPoints / 10 + 2"
@@ -23,42 +40,21 @@
         stroke="#333a4d"
       />
     </svg>
-  
-    <h3>Mission</h3>
-    <p>Player on mission {{player.mission.id}}: <em>{{player.mission.title}}</em>.</p>
-  
-    <h3>Edit Player</h3>
-    <div class="form-group">
-      <label>
-        <span>Hit Points:</span>
-        <input type="number" [(ngModel)]="player.hitPoints" placeholder="27" min="0" max="27" class="form-control-sm"> / {{player.maxHitPoints}}
-      </label>
-    </div>
     <div class="form-group">
       <label>
         <span>Game Level:</span>
         <input type="number" [(ngModel)]="player.level" placeholder="0" min="0" max="10" class="form-control-sm">
       </label>
     </div>
+  
     <div class="form-group">
       <label>
-        <span>Position x:</span>
-        <input type="range" [(ngModel)]="player.x" min="64" max="1984" step="64" class="form-control-range">
-      </label>
-    </div>
-    <div class="form-group">
-      <label>
-        <span>Position y:</span>
-        <input type="range" [(ngModel)]="player.y" min="64" max="1489" class="form-control-range">
-      </label>
-    </div>
-    <div class="form-group">
-      <label>
-        <span>Mission:</span>
+        <h3>Mission</h3>
         <select [(ngModel)]="player.mission" class="form-control form-control-sm">
           <option *ngFor="let mission of missions" [ngValue]="mission">{{mission.title}}</option>
         </select>
       </label>
+      <p>Player on mission {{player.mission.id}}: <em>{{player.mission.title}}</em>.</p>
     </div>  
   </section>
 </div>
